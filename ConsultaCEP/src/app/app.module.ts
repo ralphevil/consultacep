@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ConsultaComponent } from './pages/consulta/consulta.component';
+import { AuthGuardService } from './guards/auth.guard';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ConsultaComponent } from './pages/consulta/consulta.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
