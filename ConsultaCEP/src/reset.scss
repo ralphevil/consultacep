@@ -1,0 +1,43 @@
+*, *::after, *::before {
+    position: relative;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    min-height: 100vh;
+    display: grid;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a, button {
+    white-space: nowrap;
+}
+
+a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

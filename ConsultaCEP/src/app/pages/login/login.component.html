@@ -1,0 +1,34 @@
+<main class="login">
+  <section class="logo-section">
+    <img class="logo" src="assets/img/cepLogo.svg" alt="Logo">
+    <div>
+      <h2>Consulte o CEP que você precisa.</h2>
+      <p>Em qualquer lugar. A qualquer momento.</p>
+    </div>
+  </section>
+  <section class="login-section">
+    <div class="login-content">
+      <img class="text-logo" src="assets/img/consultaLogo.svg" alt="Logo escrito consulta cep">
+      <div class="heading">
+        <div class="divider"></div>
+        <p>Entre já</p>
+        <div class="divider"></div>
+      </div>
+      <form [formGroup]="loginForm" (submit)="onSubmit($event)">
+        <div class="form-section">
+          <div class="input-container">
+            <span class="material-icons">person</span>
+            <input formControlName="login" name="login" type="text" placeholder="Login">
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="input-container">
+            <span class="material-icons">lock</span>
+            <input formControlName="senha" name="senha" type="password" placeholder="Senha">
+          </div>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,35 @@
+<main class="consulta">
+  <header>
+    <form [formGroup]="consultForm" (ngSubmit)="onSubmit($event)">
+      <label for="cep">Digite o Cep (somente números)</label>
+      <div>
+        <input formControlName="cep" id="cep" name="cep" type="number" placeholder="00000000" maxlength="8">
+        <button type="submit">Consultar</button>
+      </div>
+    </form>
+  </header>
+  <section>
+    <div class="cep-infos">
+      <div class="cep-group">
+        <label for="logradouro">Logradouro</label>
+        <input [(ngModel)]="address.logradouro" id="logradouro" name="logradouro" type="text" placeholder="Logradouro" readonly>
+      </div>
+      <div class="cep-group">
+        <label for="bairro">Bairro</label>
+        <input [(ngModel)]="address.bairro" id="bairro" name="bairro" type="text" placeholder="Bairro" readonly>
+      </div>
+      <div class="cep-group">
+        <label for="localidade">Localidade</label>
+        <input [(ngModel)]="address.localidade" id="localidade" name="localidade" type="text" placeholder="Localidade" readonly>
+      </div>
+      <div class="cep-group">
+        <label for="uf">UF</label>
+        <input [(ngModel)]="address.uf" id="uf" name="uf" type="text" placeholder="UF" readonly>
+      </div>
+      <button class="reset" (click)="onReset()">Resetar</button>
+    </div>
+  </section>
+  <footer>
+    <button (click)="onLogOut()"><span class="material-icons">logout</span></button>
+  </footer>
+</main>
