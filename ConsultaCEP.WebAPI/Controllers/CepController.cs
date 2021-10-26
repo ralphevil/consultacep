@@ -23,7 +23,7 @@ namespace ConsultaCEP.WebAPI.Controllers
                     var resultado = _cepService.GetAddressByCep(cep);
                     return Ok(resultado);
                 }else{
-                    return BadRequest("CEP com falta de caracteres");
+                    return BadRequest("O CEP inserido é inválido!");
                 }
                 
             }catch(Exception ex){
