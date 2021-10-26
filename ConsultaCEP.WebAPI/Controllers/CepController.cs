@@ -21,9 +21,13 @@ namespace ConsultaCEP.WebAPI.Controllers
             try{
                 if (cep.Length == 8){
                     var resultado = _cepService.GetAddressByCep(cep);
-                    return Ok(resultado);
+                    if (resultado != null){
+                        return Ok(resultado);
+                    }else{
+                        return BadRequest("O CEP inserido é inválido!");
+                    }                    
                 }else{
-                    return BadRequest("O CEP inserido é inválido!");
+                    return BadRequest("O CEP não possui 8 caracteres!");
                 }
                 
             }catch(Exception ex){

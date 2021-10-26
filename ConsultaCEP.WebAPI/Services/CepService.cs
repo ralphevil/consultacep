@@ -10,7 +10,12 @@ namespace ConsultaCEP.WebAPI.Services
         {
             ApiService _apiService = new ApiService();
             var address = _apiService.AddressAsync(cep);
-            return address.Result;
+            if (address.Result.Cep != null){
+                return address.Result;
+            }else{
+                return null;
+            }
+            
         }
     }
 }
