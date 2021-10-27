@@ -1,4 +1,4 @@
-# <img src="images/logo-consultacep.png" alt="Consulta CEP" width="350px" />
+# <img src="images/logo-consultacep.svg" alt="Consulta CEP" width="350px" />
 
 ### Aplicação para Consulta de CEPs
 
