@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ConsultaComponent } from './pages/consulta/consulta.component';
 import { AuthGuardService } from './guards/auth.guard';
 
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AuthGuardService } from './guards/auth.guard';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]

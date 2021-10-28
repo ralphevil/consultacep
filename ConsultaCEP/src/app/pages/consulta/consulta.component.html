@@ -3,7 +3,7 @@
     <form [formGroup]="consultForm" (ngSubmit)="onSubmit($event)">
       <label for="cep">Digite o Cep (somente números)</label>
       <div>
-        <input formControlName="cep" id="cep" name="cep" type="number" placeholder="00000000" maxlength="8">
+        <input formControlName="cep" id="cep" name="cep" type="text" placeholder="00000-000" mask="00000-999">
         <button type="submit">Consultar</button>
       </div>
     </form>
@@ -26,7 +26,7 @@
         <label for="uf">UF</label>
         <input [(ngModel)]="address.uf" id="uf" name="uf" type="text" placeholder="UF" readonly>
       </div>
-      <button class="reset" (click)="onReset()">Resetar</button>
+      <button class="reset" (click)="onReset()">Limpar Campos</button>
     </div>
   </section>
   <footer>
