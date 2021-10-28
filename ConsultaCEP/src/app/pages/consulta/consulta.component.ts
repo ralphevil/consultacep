@@ -22,7 +22,7 @@ export class ConsultaComponent implements OnInit {
     });
   }
 
-  onSubmit(e): void {
+  onSubmit(e: Event): void {
     e.preventDefault();
     const cep = this.consultForm.value.cep;
     
@@ -44,6 +44,7 @@ export class ConsultaComponent implements OnInit {
   }
 
   onReset(): void {
+    this.consultForm.reset();
     this.address = new Cep();
   }
 }

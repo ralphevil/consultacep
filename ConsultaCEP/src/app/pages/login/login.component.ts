@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit(e): void {
+  onSubmit(e: Event): void {
     e.preventDefault();
     const loginInfo = this.loginForm.value;
     const user = new User(loginInfo.login, loginInfo.senha);

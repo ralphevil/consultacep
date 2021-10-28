@@ -8,23 +8,17 @@ import { CanActivate, Router } from '@angular/router';
 export class AuthGuardService implements CanActivate {
 
   constructor(private router: Router) { }
-  
 
   canActivate() {
-    if (this.getLoggedStatus()){
-        return true;
-    }else{
-        this.router.navigate(['/']);
-        return false;
+    if (this.getLoggedStatus()) {
+      return true;
+    } else {
+      this.router.navigate(['/']);
+      return false;
     }
   }
 
-  getLoggedStatus(): boolean{
-    if (localStorage.getItem('isLoggedIn') == 'true'){
-      return true;
-    }else{
-      return false
-    }
+  getLoggedStatus(): boolean {
+    return (localStorage.getItem('isLoggedIn') == 'true');
   }
 }
-
